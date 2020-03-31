@@ -1,0 +1,7 @@
+<resources>
+    <string name="refresh_loading">拼命为您加载中</string>
+    <string name="refresh_foot">已经到底了~</string>
+    <string name="refresh_reload">点击重试</string>
+    <string name="refresh_empty">添加内容</string>
+    <string name="refresh_data_fail">没有结果！！？</string>
+</resources>

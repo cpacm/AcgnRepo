@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cpacm.comic">
+
+    <application>
+        <activity
+            android:name=".ui.ComicReaderActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ComicReaderTheme" />
+        <activity
+            android:name=".ui.site.ComicListActivity"
+            android:theme="@style/BaseTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.site.ComicDetailActivity"
+            android:theme="@style/BaseTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.search.ComicSearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/BaseTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.ComicHistoryActivity"
+            android:theme="@style/BaseTheme.NoActionBar" />
+    </application>
+
+</manifest>

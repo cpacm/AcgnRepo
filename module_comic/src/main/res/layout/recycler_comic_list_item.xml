@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="@dimen/line_length_half"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="@dimen/line_length_half"
+    android:background="@color/white"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/comicCover"
+            android:layout_width="81dp"
+            android:layout_height="108dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+        <RelativeLayout
+            android:id="@+id/comicTitleLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/line_length_half"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/comicCover"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/comicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/comicStatus"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_body"
+                tools:text="尖帽子的魔法工房" />
+
+            <TextView
+                android:id="@+id/comicStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/line_length_half"
+                android:ellipsize="end"
+                android:maxWidth="70dp"
+                android:maxLines="1"
+                android:textColor="@color/black_alpha"
+                android:textSize="@dimen/text_mini"
+                tools:text="状态：已完结 " />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comicAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/line_length_half"
+            android:maxLines="2"
+            android:textColor="@color/black_alpha"
+            android:textSize="@dimen/text_tag"
+            app:layout_constraintStart_toEndOf="@+id/comicCover"
+            app:layout_constraintTop_toBottomOf="@+id/comicTitleLayout"
+            tools:text="白浜鸥 / 2016年 / 连载中" />
+
+        <TextView
+            android:id="@+id/comicCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/line_length_half"
+            android:maxLines="1"
+            android:textColor="@color/black_alpha"
+            android:textSize="@dimen/text_tag"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/comicCover"
+            app:layout_constraintTop_toBottomOf="@+id/comicAuthor"
+            tools:text="白浜鸥 / 2016年 / 连载中" />
+
+        <TextView
+            android:id="@+id/comicDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/line_length_half"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_tag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/comicCover"
+            tools:text="从小憧憬着成为魔法使的少女，某天窥探到了施展魔法的过程……从此，帅哥魔法使的萝莉养成任务开始了" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

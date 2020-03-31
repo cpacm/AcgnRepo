@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/comic_menu_background"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/horizontal_padding"
+    android:paddingTop="@dimen/line_length"
+    android:paddingRight="@dimen/horizontal_padding"
+    android:paddingBottom="@dimen/line_length">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comic_setting_item_height"
+        android:layout_marginBottom="@dimen/line_length"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setting_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/comic_setting_brightness"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+        <TextView
+            android:id="@+id/setting_system_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/reader_button_background"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="4dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/comic_setting_system"
+            android:textColor="@color/text_system_selector"
+            android:textSize="@dimen/text_body" />
+
+        <com.cpacm.libarch.ui.widgets.ReaderSeekBar
+            android:id="@+id/setting_brightness_seekbar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/setting_system_brightness"
+            android:layout_toRightOf="@id/setting_brightness"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:progressDrawable="@drawable/reader_seekbar"
+            android:secondaryProgress="0"
+            android:splitTrack="false"
+            android:thumb="@drawable/progress_thumb"
+            android:thumbOffset="0dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="@dimen/line_length"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comic_setting_turning"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/comic_mode_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/comic_menu_background"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:id="@+id/comic_right_iv"
+                        android:layout_width="64dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:src="@drawable/ic_hand_hor_right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/comic_setting_turning_hor_right"
+                        android:textColor="@color/text_mode_selector"
+                        android:textSize="@dimen/text_tag" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/comic_mode_left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/comic_menu_background"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:id="@+id/comic_left_iv"
+                        android:layout_width="64dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:src="@drawable/ic_hand_hor_left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/comic_setting_turning_hor_left"
+                        android:textColor="@color/text_mode_selector"
+                        android:textSize="@dimen/text_tag" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/comic_mode_ver_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/comic_menu_background"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:id="@+id/comic_ver_iv"
+                        android:layout_width="64dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:src="@drawable/ic_hand_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/comic_setting_turning_ver"
+                        android:textColor="@color/text_mode_selector"
+                        android:textSize="@dimen/text_tag" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_length"
+        android:layout_marginBottom="@dimen/vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/comic_setting_double_tap"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+        <LinearLayout
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/allowBtn"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/comic_left_button_background"
+                android:gravity="center"
+                android:text="@string/allow"
+                android:textColor="@color/text_system_selector"
+                android:textSize="@dimen/text_tag" />
+
+            <TextView
+                android:id="@+id/stopBtn"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/comic_right_button_background"
+                android:gravity="center"
+                android:text="@string/stop"
+                android:textColor="@color/text_system_selector"
+                android:textSize="@dimen/text_tag" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

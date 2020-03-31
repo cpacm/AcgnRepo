@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_back"
+            android:icon="@drawable/ic_comic_exit"
+            android:title="@string/exit" />
+    </group>
+
+    <item android:title="@string/comic">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/nav_update"
+                    android:icon="@drawable/ic_comic_update"
+                    android:title="@string/comic_drawer_update" />
+                <item
+                    android:id="@+id/nav_rank"
+                    android:icon="@drawable/ic_comic_rank"
+                    android:title="@string/comic_drawer_rank" />
+                <item
+                    android:id="@+id/nav_category"
+                    android:icon="@drawable/ic_comic_category"
+                    android:title="@string/comic_drawer_category" />
+
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

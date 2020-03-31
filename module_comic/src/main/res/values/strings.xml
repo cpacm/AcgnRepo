@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">漫画</string>
+    <string name="comic">漫画</string>
+    <string name="my">我的</string>
+
+    <string name="comic_orientation_error">请先在设置中切换成横向滑动</string>
+    <string name="comic_empty">没有漫画</string>
+    <string name="comic_read_error">未找到可以阅读的章节</string>
+    <string name="comic_chapter_error">加载章节内容失败</string>
+    <string name="comic_detail_error">获取漫画内容失败</string>
+    <string name="comic_chapter_finish">已经没有章节了!</string>
+    <string name="comic_chapter_finish_btn">休息一下!</string>
+    <string name="comic_history_title">漫画记录</string>
+    <string name="comic_collection_title">收藏漫画</string>
+    <string name="comic_exit">确定退出漫画阅读吗？</string>
+
+    <string name="comic_setting_brightness">亮度</string>
+    <string name="comic_setting_system">系统</string>
+    <string name="comic_setting_turning">翻页</string>
+    <string name="comic_setting_turning_hor_right">普通模式</string>
+    <string name="comic_setting_turning_hor_left">日漫模式</string>
+    <string name="comic_setting_turning_ver">滚动模式</string>
+    <string name="comic_setting_double_tap">允许双击缩放画面</string>
+
+    <string name="dmzj_title">动漫之家</string>
+    <string name="dmzj_desc">最全的漫画内容、最及时的漫画更新!</string>
+    <string name="hh_title">汗汗漫画</string>
+    <string name="hh_desc">和谐福利漫画大全</string>
+    <string name="mhd_title">漫画堆</string>
+    <string name="mhd_desc">好看的漫画一大堆</string>
+    <string name="pica_title">嗶咔漫畫</string>
+    <string name="pica_desc">嗶咔嗶咔漫畫讓你可以輕鬆看到不同的本子，界面美觀易用，分類齊全，每天更新，紳士必備！</string>
+    <string name="xx_title">新新漫画</string>
+    <string name="xx_desc">集齐漫画资源相当丰富，只有你想不到的，没有看不到的，每天更新百部漫画。</string>
+    <string name="mh123_title">漫画123</string>
+    <string name="mh123_desc">好看的国产漫画，恐怖漫画，韩国漫画，各类型漫画大全，看漫画尽在漫画123。</string>
+    <string name="mgbz_title">Mangabz</string>
+    <string name="mgbz_desc">Mangabz是全网资源最全的在线漫画、日本漫画阅读平台。超快的更新速度，第一时间为你奉上极致的阅读体验。</string>
+
+    <string name="comic_declaration">阅读声明</string>
+    <string name="comic_declaration_0">请在WIFI环境下获得最佳阅读体验！</string>
+    <string name="comic_declaration_1">漫画资源均来自第三方网站，若出现无法使用的情况则可能是第三方资源不稳定</string>
+    <string name="comic_declaration_2">观看该网站可能需要科学上网工具</string>
+    <string name="comic_declaration_3">未满18周岁禁止进入</string>
+    <string name="comic_declaration_pica">哔咔漫画需要自备一个可以登录的账号哦</string>
+    <string name="comic_declaration_got">I Know!</string>
+    <string name="comic_declaration_show">不再显示该提示</string>
+    <string name="comic_login_email_error">请输入正确的账号格式</string>
+    <string name="comic_login_password_error">请输入正确的密码格式</string>
+    <string name="comic_login_success">登录成功</string>
+    <string name="comic_login_fail">登录失败</string>
+
+    <string name="comic_pica_init">正在获取配置信息</string>
+    <string name="comic_drawer_update">最近更新</string>
+    <string name="comic_drawer_rank">排行</string>
+    <string name="comic_drawer_rank_day">每日排行</string>
+    <string name="comic_drawer_rank_week">每周排行</string>
+    <string name="comic_drawer_rank_month">每月排行</string>
+    <string name="comic_drawer_rank_all">总排行</string>
+    <string name="comic_drawer_category">分类</string>
+    <string name="comic_drawer_relogin">重新登录</string>
+    <string name="comic_drawer_history">历史记录</string>
+    <string name="comic_drawer_collect">收藏</string>
+    <string name="comic_drawer_download">下载</string>
+    <string name="comic_drawer_link_error">无法访问原网站</string>
+    <string name="comic_collect">收藏</string>
+    <string name="comic_collect_done">已收藏</string>
+    <string name="comic_start_read">开始阅读</string>
+    <string name="comic_continue_read">继续阅读</string>
+    <string name="comic_chapter">漫画章节</string>
+
+    <string name="comic_search_hint">请输入漫画名称</string>
+
+    <string name="comic_reader_error">漫画阅读器正在提取中</string>
+
+</resources>

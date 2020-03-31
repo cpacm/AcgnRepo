@@ -1,0 +1,2 @@
+rootProject.name='AcgnRepo'
+include ':app', ':libarch', ':liblist', ':module_comic', ':module_novel'

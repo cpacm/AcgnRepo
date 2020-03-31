@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation "androidx.test:runner:$rootProject.ext.dependVersion.test_runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.dependVersion.test_espresso"
+
+    kapt "com.github.bumptech.glide:compiler:${rootProject.ext.dependVersion.glide}"
+
+    implementation project(path: ':libarch')
+    implementation project(path: ':liblist')
+
+    //jsoup
+    implementation "org.jsoup:jsoup:1.10.2"
+    testImplementation 'org.robolectric:robolectric:4.1'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation "com.github.bumptech.glide:recyclerview-integration:$rootProject.ext.dependVersion.glide"
+
+    //cookie库
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+}

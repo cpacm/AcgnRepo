@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="@dimen/vertical_margin"
+    android:background="@drawable/common_button_selector"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:maxLines="1"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:textColor="@color/white"
+    android:textSize="@dimen/text_subhead"
+    tools:text="打打">
+
+</TextView>

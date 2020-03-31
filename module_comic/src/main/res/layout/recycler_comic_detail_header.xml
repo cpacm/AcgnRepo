@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/line_length">
+
+    <LinearLayout
+        android:id="@+id/tagLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/comic_item_tag_rect"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/tag"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_body" />
+
+        <com.cpacm.libarch.ui.widgets.TagGroup
+            android:id="@+id/tagGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/line_length"
+            android:layout_marginEnd="@dimen/horizontal_margin" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/comic_item_tag_rect"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/description"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_body" />
+
+        <com.cpacm.libarch.ui.widgets.ExpandableTextView
+            android:id="@+id/comicDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/line_length"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            app:animDuration="100"
+            app:maxCollapsedLines="3">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_caption"
+                tools:text="这是简单介绍" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|bottom"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+        </com.cpacm.libarch.ui.widgets.ExpandableTextView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/adContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_length"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chapterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/line_length"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/comicMenuTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/comic_item_tag_rect"
+            android:drawablePadding="10dp"
+            android:text="@string/comic_chapter"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.cpacm.libarch.ui.widgets.ScaleRatioCardView
+            android:id="@+id/readButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/line_length"
+            android:elevation="1dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="16dp"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:radio="0"
+            app:zoom="0.9">
+
+            <TextView
+                android:id="@+id/readTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:text="@string/comic_start_read"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_caption" />
+
+        </com.cpacm.libarch.ui.widgets.ScaleRatioCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

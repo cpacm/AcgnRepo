@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+kapt {
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation "androidx.test:runner:$rootProject.ext.dependVersion.test_runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.dependVersion.test_espresso"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    // base
+    api "androidx.cardview:cardview:$rootProject.ext.dependVersion.support"
+    api "androidx.legacy:legacy-support-v4:$rootProject.ext.dependVersion.support"
+    api "androidx.appcompat:appcompat:$rootProject.ext.dependVersion.appcompat"
+    api "com.google.android.material:material:$rootProject.ext.dependVersion.material"
+    api "androidx.palette:palette:$rootProject.ext.dependVersion.support"
+    api "androidx.vectordrawable:vectordrawable:$rootProject.ext.dependVersion.support"
+    api "androidx.constraintlayout:constraintlayout:1.1.3"
+
+    //kotlinx-coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.ext.dependVersion.kotlinx_coroutines"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.ext.dependVersion.kotlinx_coroutines"
+
+    // ViewModel and LiveData
+    api "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.dependVersion.lifecycle"
+    api "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.dependVersion.lifecycle"
+
+    // network
+    api "com.squareup.retrofit2:retrofit:${rootProject.ext.dependVersion.retrofit}"
+    api "com.squareup.retrofit2:converter-gson:${rootProject.ext.dependVersion.retrofit}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.dependVersion.retrofit}"
+    api "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.dependVersion.okhttp}"
+
+    api "io.reactivex.rxjava2:rxjava:${rootProject.ext.dependVersion.rxjava}"
+    api "io.reactivex.rxjava2:rxandroid:${rootProject.ext.dependVersion.rxandroid}"
+    api "zlc.season:rxdownload3:1.2.7"
+
+    //glide
+    api "com.github.bumptech.glide:glide:${rootProject.ext.dependVersion.glide}"
+    api "com.github.bumptech.glide:annotations:${rootProject.ext.dependVersion.glide}"
+    api "com.github.bumptech.glide:okhttp3-integration:${rootProject.ext.dependVersion.glide}"
+
+    api "com.github.bumptech.glide:okhttp3-integration:${rootProject.ext.dependVersion.glide}"
+    api 'jp.wasabeef:glide-transformations:4.0.1'
+
+    //other
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //弹窗
+    api "com.afollestad.material-dialogs:core:${rootProject.ext.dependVersion.materialdialogs}"
+    api "com.afollestad.material-dialogs:input:${rootProject.ext.dependVersion.materialdialogs}"
+    api "com.afollestad.material-dialogs:lifecycle:${rootProject.ext.dependVersion.materialdialogs}"
+
+    api "com.google.code.gson:gson:${rootProject.ext.dependVersion.gson}"
+
+
+}
+
+repositories {
+    mavenCentral()
+}

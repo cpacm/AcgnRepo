@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white"
+    android:padding="8dp"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/line_length_double"
+        android:src="@drawable/ic_comic_pica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/initLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_length_double"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_icon">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:progressBackgroundTint="@color/colorAccent"
+            android:progressTint="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_length"
+            android:text="@string/comic_pica_init" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="@dimen/line_length_double"
+        android:layout_marginRight="36dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_icon"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/address1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="主线（需科学上网）"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+        <TextView
+            android:id="@+id/address2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_length"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="分流1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+        <TextView
+            android:id="@+id/address3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_length"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="分流2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_subhead" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/line_length_double"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressLayout">
+
+        <FrameLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/account_edittext_padding"
+            android:paddingEnd="@dimen/account_edittext_padding">
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_pica_email"
+                android:drawablePadding="4dp"
+                android:hint="@string/email"
+                android:inputType="number|phone"
+                android:maxLength="11"
+                android:textSize="@dimen/text_body" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/grey" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_length"
+            android:paddingStart="@dimen/account_edittext_padding"
+            android:paddingEnd="@dimen/account_edittext_padding">
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_pica_password"
+                android:drawablePadding="4dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:textSize="@dimen/text_body" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/grey" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/picaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/line_length_double"
+            android:background="@drawable/common_button_selector"
+            android:paddingStart="36dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="36dp"
+            android:paddingBottom="4dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_button" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

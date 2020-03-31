@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="BaseTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseTheme.Immersive" parent="BaseTheme.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--透明导航栏-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

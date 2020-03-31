@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.cpacm.libarch.ui.widgets.ScaleRatioCardView
+        android:id="@+id/history_layout"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:radio="1.333">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/cover_default" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/text_gradient_up_bg"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_caption"
+            tools:text="夏洛特夏洛特夏洛特夏洛特夏洛特" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="@dimen/line_length"
+            android:background="@drawable/comic_tag_background"
+            android:paddingStart="@dimen/line_length"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/line_length_half"
+            android:paddingBottom="2dp"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_mini"
+            tools:text="动画" />
+
+
+    </com.cpacm.libarch.ui.widgets.ScaleRatioCardView>
+
+
+</FrameLayout>
+
+
+

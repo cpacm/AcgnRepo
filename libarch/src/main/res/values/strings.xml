@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">core</string>
+    <string name="network_error">网络好像不给力，请重试~</string>
+
+    <string name="app_jump">前往%1$s客户端</string>
+    <string name="app_jump_confirm">允许使用%1$s客户端打开吗？也可以直接使用网页打开页面</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="web">网页</string>
+
+
+    <string name="refresh_loading">拼命为您加载中!</string>
+    <string name="setting">设置</string>
+    <string name="app_permission_check">程序运行之前需要获取权限, 若没有这些权限可能会影响您的正常使用.</string>
+    <string name="app_permission_denied">程序权限获取失败</string>
+    <string name="app_module_unload">尚未加载该模块</string>
+    <string name="app_submit">提交</string>
+    <string name="enter_main">开始体验</string>
+
+    <string name="agree">同意</string>
+    <string name="edit">编辑</string>
+    <string name="search">搜索</string>
+    <string name="share">分享</string>
+    <string name="empty" />
+    <string name="all">全部</string>
+    <string name="copy">复制</string>
+    <string name="finish">完成</string>
+    <string name="select_all">全选</string>
+    <string name="copy_to_board">已复制到粘贴板</string>
+    <string name="press_again_bye_app">再按一次退出%s</string>
+    <string name="loading_more">加载更多</string>
+    <string name="refresh_load">重新加载</string>
+    <string name="expand">展开</string>
+    <string name="collapse">收起</string>
+    <string name="refresh_data_fail">没有结果！！？</string>
+    <string name="refresh">刷新</string>
+    <string name="loading">正在加载…</string>
+    <string name="close">关闭</string>
+    <string name="open">打开</string>
+    <string name="save">保存</string>
+    <string name="my">我的</string>
+    <string name="allow">允许</string>
+    <string name="stop">禁止</string>
+    <string name="notify">通知</string>
+    <string name="shield">屏蔽</string>
+    <string name="phone">手机号</string>
+    <string name="email">邮箱</string>
+    <string name="verify">验证码</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="description">简介</string>
+    <string name="tag">标签</string>
+    <string name="watch">观看</string>
+    <string name="online">在线</string>
+    <string name="download">下载</string>
+    <string name="logout">退出登录</string>
+    <string name="other">其他</string>
+    <string name="menu">菜单</string>
+    <string name="more">更多</string>
+    <string name="delete">删除</string>
+    <string name="company">企业</string>
+    <string name="exit">退出</string>
+    <string name="enter">进入</string>
+    <string name="origin">原网页</string>
+    <string name="continue_visit">继续访问</string>
+    <string name="notification_error_ssl_cert_invalid">访问地址包含非法的SSL证书, 是否继续?</string>
+    <string name="loading_error">网络异常，请稍后再试</string>
+    <string name="click_to_retry">再刷新试试</string>
+    <string name="reload">重新加载</string>
+    <string name="load_failed">加载失败</string>
+    <string name="app_update">正在下载更新包</string>
+    <string name="app_update_complete">更新包下载完毕</string>
+    <string name="is_support_ipv6">您正在使用IPv6网络进行访问</string>
+    <string name="avatar_too_small">用户头像太小</string>
+    <string name="err_get_data">获取数据失败</string>
+    <string name="server_error">服务器开小差了，请稍后再试</string>
+    <string name="connect_error">网络异常</string>
+    <string name="network_error_description">请检查您的网络后刷新页面</string>
+    <string name="content_description">图片描述</string>
+
+
+</resources>

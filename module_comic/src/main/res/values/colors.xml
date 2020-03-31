@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="comic_menu_background">#242636</color>
+    <color name="comic_main_background">#333333</color>
+
+    <color name="comic_toast_bg">#AA242636</color>
+    <color name="comic_window_background">#ededed</color>
+
+    <color name="link_color">#A5D6FF</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="disable_frame">#55ACACAC</color>
+</resources>

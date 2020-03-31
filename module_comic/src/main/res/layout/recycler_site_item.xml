@@ -1,0 +1,79 @@
+<com.cpacm.libarch.ui.widgets.ScaleRatioCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/siteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp"
+    app:enableZoom="false"
+    app:radio="0.74">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/siteCover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="W,9:16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@color/background" />
+
+        <ImageView
+            android:id="@+id/siteLogo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@drawable/cover_default" />
+
+        <TextView
+            android:id="@+id/siteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/siteLogo"
+            app:layout_constraintTop_toBottomOf="@+id/siteCover"
+            app:layout_constraintVertical_bias="0.6"
+            tools:text="动漫之家" />
+
+        <TextView
+            android:id="@+id/siteEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/common_button_selector"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="@string/enter"
+            android:textColor="@color/white_normal"
+            android:textSize="@dimen/text_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteCover"
+            app:layout_constraintVertical_bias="0.6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.cpacm.libarch.ui.widgets.ScaleRatioCardView>

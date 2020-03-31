@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#010101</color>
+    <!--<color name="colorAccent">#fb2996|#79b8f5|7c77f6|f6a9fa</color>-->
+    <!--<color name="colorAccent">#965dad</color>-->
+    <!--<color name="colorAccent">#e90101</color>-->
+    <!--<color name="colorAccent">#4a8fd2</color>-->
+    <color name="colorAccent">#7c77f6</color>
+
+
+    <color name="colorAccentLight">#7d7c77f6</color>
+    <color name="background">#fffafafa</color>
+    <color name="window_background">#FFFCFCFC</color>
+    <color name="transfer">#00000000</color>
+    <color name="black_transfer_mask">#50000000</color>
+    <color name="item_transfer_mask">#70000000</color>
+    <color name="progressBackgroundColorLight">#33000000</color>
+    <color name="text_shadow">#33000000</color>
+    <color name="background_transfer_mask">#20000000</color>
+
+    <!-- 常用颜色 -->
+    <color name="black">#000000</color>
+    <color name="black_alpha">#8A000000</color>
+    <color name="black_alpha_more">#64000000</color>
+    <color name="black_transform">#3C000000</color>
+    <color name="black_normal">#DE000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha">#8AFFFFFF</color>
+    <color name="white_normal">#DEFFFFFF</color>
+    <color name="white_alpha_more">#64FFFFFF</color>
+    <color name="white_transform">#00FFFFFF</color>
+    <color name="grey">#cccccc</color>
+    <color name="grey_alpha">#64d6d6d6</color>
+
+    <color name="yellow">#ffa823</color>
+
+    <color name="seekbar_background">#cccccc</color>
+    <color name="seekbar_color">#b0da2d25</color>
+
+</resources>

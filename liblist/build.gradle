@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation "androidx.test:runner:$rootProject.ext.dependVersion.test_runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.dependVersion.test_espresso"
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.dependVersion.appcompat"
+    implementation "com.google.android.material:material:$rootProject.ext.dependVersion.material"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.ext.dependVersion.swipe"
+}

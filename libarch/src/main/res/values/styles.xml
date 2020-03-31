@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">@dimen/toolbar_height</item>
+
+        <item name="md_color_button_text">@color/colorAccent</item>
+
+    </style>
+
+    <style name="BaseTheme.Dialog" parent="Theme.AppCompat.Light.Dialog" />
+
+    <style name="BaseTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseTheme.Full" parent="BaseTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="BaseTheme.Immersive" parent="BaseTheme.NoActionBar">
+        <!--透明导航栏-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+    <style name="BaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="BaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="FullHeightDialog" parent="BaseTheme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transfer</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <!-- text -->
+    <style name="AppBarExpandedText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:background">@drawable/text_gradient_up_bg</item>
+    </style>
+
+    <style name="AppBarCollapsedText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+</resources>

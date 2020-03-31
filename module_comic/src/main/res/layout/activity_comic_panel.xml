@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="0dp"
+    android:transitionName="container"
+    tools:background="@color/black_normal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/comicCover"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:transitionName="cover"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/cover_default" />
+
+
+    <TextView
+        android:id="@+id/comicName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/line_length"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/comicCover"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Subject Name" />
+
+    <TextView
+        android:id="@+id/comicInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:scrollHorizontally="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/comicScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/comicName"
+        app:layout_constraintTop_toBottomOf="@+id/comicName"
+        tools:text="放送日期：2019-10-21" />
+
+    <TextView
+        android:id="@+id/comicScore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/comicCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/comicName"
+        tools:ignore="RtlSymmetry"
+        tools:text="tag tag " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
